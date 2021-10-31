@@ -1,3 +1,36 @@
 body{
     font-family: 'raleway';
 }
+a{
+    text-decoration: none;
+    color: black;
+}
+section{
+    padding: 15px;
+}
+ul{
+    list-style-type: none;
+}
+/* Header */
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px ;
+    align-items: center;
+}
+header nav{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+header nav ul{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+header nav ul li{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
