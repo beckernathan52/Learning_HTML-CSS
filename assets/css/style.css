@@ -106,3 +106,39 @@ header li:hover a{
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
 }
+
+/* Filters */
+#filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#filters ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+#filters ul li{
+    border: solid 2px;
+    border-color: #f2f2f2;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+#filters ul li i{
+    color: #0065fc;
+    margin-right: 10px;
+}
+#filters p{
+    display: flex;
+}
+#filters p i{
+    border: solid 1px;
+    padding: 3px;
+    color: #0065fc;
+    border-color: grey;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+    min-width: 2.5em;
+    align-items: center;
+}
