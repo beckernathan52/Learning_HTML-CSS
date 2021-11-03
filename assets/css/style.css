@@ -169,3 +169,41 @@ header li:hover a{
 #filters ul li:hover{
     background-color: #deebff;
 }
+
+/* Most Popular */
+
+#mostpopular{
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+#mostpopular > article{
+    background-color: white;
+    border-radius: 20px;
+    flex-basis: 100%;
+}
+#mostpopular article > a{
+    display: flex;
+    flex-direction: row;
+}
+#mostpopular article > div{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+}
+#mostpopular article div i{
+    color: #0065fc;
+}
+#mostpopular article figure{
+    display: flex;
+    flex-basis: 45%;
+    height: 100%;
+}
+#mostpopular figure > img{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    object-fit: cover;
+    height: 150px;
+    flex-basis: 100%;
+}
