@@ -6,6 +6,17 @@ body{
     font-family: 'raleway';
     margin: 0;
 }
+h1{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+h2{
+    font-weight: bold;
+}
+h3{
+    font-weight: bold;
+}
 a{
     text-decoration: none;
     color: black;
@@ -30,6 +41,7 @@ header nav{
     display: flex;
     flex-basis: 100%;
     justify-content: space-between;
+    margin-top: 30px;
 }
 header nav ul{
     display: flex;
@@ -66,12 +78,7 @@ header li:hover a{
 /* Main */
 
 /* Location */
-#location h1{
-    margin-top: -15px;
-}
-#location p{
-    margin-top: -6px;
-}
+
 #location form{
     border: solid 1px;
     border-radius: 20px;
@@ -110,8 +117,8 @@ header li:hover a{
 
 /* Filters */
 
-#filters h3{
-    margin: 5px;
+#filters h2{
+    font-size: 1.2em;
 }
 #filters{
     display: flex;
@@ -150,6 +157,7 @@ header li:hover a{
     display: flex;
     align-items: flex-start;
     position: relative;
+    padding-top: 30px;
 }
 #filters p i{
     border: solid 1px;
@@ -168,4 +176,64 @@ header li:hover a{
 }
 #filters ul li:hover{
     background-color: #deebff;
+}
+
+/* Most Popular */
+
+#mostpopular{
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+#mostpopular h2{
+    font-size: 1.4em;
+    justify-content: space-between;
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+#mostpopular > article{
+    background-color: white;
+    border-radius: 20px;
+}
+#mostpopular article > a{
+    display: flex;
+}
+#mostpopular article a > div{
+    height: 150px;
+    position: relative;
+}
+#mostpopular article div > h3{
+    margin: 15px;
+}
+#mostpopular article div > p{
+    margin-left: 15px;
+}
+#mostpopular article div div{
+    margin-left: 15px;
+    position: absolute;
+    bottom: 5px;
+}
+#mostpopular article div div i{
+    color: #0065fc;
+    font-size: 1em;
+}
+#mostpopular article a > figure{
+    display: flex;
+    flex-basis: 35%;
+    height: 100%;
+    margin: 5px;
+}
+#mostpopular figure img{
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    object-fit: cover;
+    flex-basis: 100%;
+    height: 150px;
+    min-width: 160px;
+    max-width: 160px;
+}
+#mostpopular article:last-child{
+    margin-bottom: 25px;
 }
