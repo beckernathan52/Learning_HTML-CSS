@@ -398,15 +398,23 @@ footer nav ul li a{
         flex-basis: 100%;
         justify-content: center;
     }
-    #accommodation > article{
+    #accommodation > article, #activities > article{
         flex-basis: 80%;
         margin: 0 auto;
-        max-width: 380px;
-        min-width: 380px;
+        max-width: 370px;
+        min-width: 370px;
+    }
+    /* Footer */
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 20px;
     }
 }
 
-@media screen and (min-width: 760px){
+@media screen and (min-width: 720px){
     h1{
         font-size: 1.4em;
     }
@@ -420,23 +428,30 @@ footer nav ul li a{
         width: 130px;
     }
 
-    /* Mostpopular */
-    #mostpopular, #accommodation{
+    /* Mostpopular, Accommodation, Activities */
+    #mostpopular, #accommodation, #activities{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         column-gap: 15px;
     }
-    #mostpopular > h2, #accommodation > h2{
+    #mostpopular > h2, #accommodation > h2, #activities > h2{
         display: flex;
         flex-basis: 100%;
     }
-    #mostpopular > article, #accommodation > article{
+    #mostpopular > article, #accommodation > article, #activities > article{
         display: flex;
         flex-wrap: wrap;
         flex-basis: 45%;
+        margin: 0 auto;
     }
-    #mostpopular article > a{
+    
+    /* Footer */
+    footer{
         display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 20px;
     }
 }
