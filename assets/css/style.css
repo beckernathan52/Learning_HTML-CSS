@@ -358,7 +358,7 @@ footer nav ul li a{
 }
 
 
-/* Responsive for tablette */
+/* Responsive */
 
 @media screen and (min-width: 460px){
     /* Location */
@@ -382,6 +382,28 @@ footer nav ul li a{
         margin: 0 auto;
         max-width: 380px;
     }
+
+    /*Accommodation*/
+    #accommodation{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #accommodation h2{
+        flex-basis: 100%;
+    }
+    #accommodation > a{
+        display: flex;
+        flex-basis: 100%;
+        justify-content: center;
+    }
+    #accommodation > article{
+        flex-basis: 80%;
+        margin: 0 auto;
+        max-width: 380px;
+        min-width: 380px;
+    }
 }
 
 @media screen and (min-width: 760px){
@@ -399,17 +421,17 @@ footer nav ul li a{
     }
 
     /* Mostpopular */
-    #mostpopular{
+    #mostpopular, #accommodation{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        column-gap: 20px;
+        column-gap: 15px;
     }
-    #mostpopular > h2{
+    #mostpopular > h2, #accommodation > h2{
         display: flex;
         flex-basis: 100%;
     }
-    #mostpopular > article{
+    #mostpopular > article, #accommodation > article{
         display: flex;
         flex-wrap: wrap;
         flex-basis: 45%;
