@@ -361,17 +361,6 @@ footer nav ul li a{
 /* Responsive for tablette */
 
 @media screen and (min-width: 460px){
-    /* Most popular */
-    #mostpopular{
-        display: flex;
-        justify-content: center;
-    }
-    #mostpopular > article{
-        flex-basis: 70%;
-        margin: 0 auto;
-        max-width: 380px;
-    }
-
     /* Location */
     #location form{
         max-width: 300px;
@@ -383,6 +372,16 @@ footer nav ul li a{
         padding-left: 20px;
     }
     
+    /* Most popular */
+    #mostpopular{
+        display: flex;
+        justify-content: center;
+    }
+    #mostpopular > article{
+        flex-basis: 70%;
+        margin: 0 auto;
+        max-width: 380px;
+    }
 }
 
 @media screen and (min-width: 760px){
@@ -418,6 +417,4 @@ footer nav ul li a{
     #mostpopular article > a{
         display: flex;
     }
-
-
 }
