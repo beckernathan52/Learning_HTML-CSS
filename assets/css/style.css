@@ -89,6 +89,7 @@ header li:hover a{
 #location form input{
     border: none;
     padding-right: 75px;
+    margin-left: -30px;
 }
 #location form input::placeholder{
     font-weight: bold;
@@ -201,6 +202,7 @@ header li:hover a{
 }
 #mostpopular article > a{
     display: flex;
+    flex-basis: 100%;
 }
 #mostpopular article a > div{
     height: 150px;
@@ -353,4 +355,69 @@ footer nav ul li{
 footer nav ul li a{
     display: flex;
     row-gap: 15px;
+}
+
+
+/* Responsive for tablette */
+
+@media screen and (min-width: 460px){
+    /* Most popular */
+    #mostpopular{
+        display: flex;
+        justify-content: center;
+    }
+    #mostpopular > article{
+        flex-basis: 70%;
+        margin: 0 auto;
+        max-width: 380px;
+    }
+
+    /* Location */
+    #location form{
+        max-width: 300px;
+    }
+    #location form > input{
+        margin-left: 5px;
+    }
+    #location form > input::placeholder{
+        padding-left: 20px;
+    }
+    
+}
+
+@media screen and (min-width: 760px){
+    h1{
+        font-size: 1.4em;
+    }
+
+    /* Header */
+    header > a{
+        font-size: 1.2em;
+        padding: 5px;
+    }
+    header a > img{
+        width: 130px;
+    }
+
+    /* Mostpopular */
+    #mostpopular{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 20px;
+    }
+    #mostpopular > h2{
+        display: flex;
+        flex-basis: 100%;
+    }
+    #mostpopular > article{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 45%;
+    }
+    #mostpopular article > a{
+        display: flex;
+    }
+
+
 }
