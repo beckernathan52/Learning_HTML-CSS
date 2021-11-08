@@ -328,7 +328,14 @@ header li:hover a{
     height: 130px;
     flex-basis: 100%;
     object-fit: cover;
+}   
+#container-activities, #container-activities > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
 }
+
+
 
 
 /* Footer */
@@ -341,19 +348,14 @@ footer{
     padding: 40px 30px;
 }
 footer h2{
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+}
+footer > div > div > nav {
+    padding-bottom: 40px;
 }
 footer nav ul{
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
-    padding-bottom: 30px;
-}
-footer nav ul li{
-    display: flex;
-}
-footer nav ul li a{
-    display: flex;
     row-gap: 15px;
 }
 
@@ -389,6 +391,7 @@ footer nav ul li a{
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
+        row-gap: 30px;
     }
     #accommodation h2{
         flex-basis: 100%;
@@ -398,11 +401,13 @@ footer nav ul li a{
         flex-basis: 100%;
         justify-content: center;
     }
-    #accommodation > article, #activities > article{
+    #accommodation > article{
         flex-basis: 80%;
-        margin: 0 auto;
         max-width: 370px;
         min-width: 370px;
+    }
+    #container-activities{
+        padding: 0 25px;
     }
     /* Footer */
     footer{
@@ -411,10 +416,29 @@ footer nav ul li a{
         flex-direction: row;
         justify-content: space-between;
         column-gap: 20px;
+
+    }
+
+}
+@media screen and (min-width: 620px){
+    #container-activities {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #container-activities > div:first-child, #container-activities > div:nth-child(3) {
+        flex-basis: 100%;
+    }
+    #container-activities > div:nth-child(2), #container-activities > div:nth-child(4) {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        flex-basis: 100%;
+    }
+    #container-activities > div:nth-child(2) > article, #container-activities > div:nth-child(4) > article {
+        flex-basis: 50%;
     }
 }
-
-@media screen and (min-width: 720px){
+@media screen and (min-width: 760px){
     h1{
         font-size: 1.4em;
     }
@@ -433,7 +457,7 @@ footer nav ul li a{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        column-gap: 15px;
+        column-gap: 20px;
     }
     #mostpopular > h2, #accommodation > h2, #activities > h2{
         display: flex;
@@ -445,13 +469,262 @@ footer nav ul li a{
         flex-basis: 45%;
         margin: 0 auto;
     }
+    #container-activities{
+        column-gap: 20px;
+        justify-content: space-between;
+    }
+    #container-activities > div:first-child, #container-activities div:nth-child(3){
+        flex-basis: 48.5%;
+    }
     
-    /* Footer */
-    footer{
+    #container-activities > div:nth-child(3) {
+        order: -1;
+    }
+    footer > div{
+        max-width: 1500px;
+        margin: 0 auto;
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-between;
+        
+    }
+    
+    
+    
+}
+
+@media screen and (min-width: 1400px){
+    
+    /* Header */
+    header{
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        padding: 0 20px;
+        padding-bottom: 50px;
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+    header > a:first-child{
+        position: absolute;
+        top: 35px;
+        left: 0;
+        justify-content: flex-start;
+    }
+    header > a:nth-child(2){
+        font-size: 1.3em;
+        order: 3;
+        padding: 0;
+        padding-top: 53px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    header nav{
+        display: flex;
+        flex-basis: 30%;
+        order: 2;
+    }
+    header nav > ul{
+        margin: 0;
+        padding: 0;
+    }
+    header nav ul > li{
+        font-size: 1.2em;
+        padding: 0;
+        border-bottom: none;
+        padding-top: 50px;
+        margin-top: -30px;
+        border-top: solid white 3px;
+    }
+    header nav ul > li:hover{
+        border-top: 3px solid #0065fc;
+        border-bottom: none;
+    }
+    
+    /* Main */
+    main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        max-width: 1500px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    /* Filters */
+    #filters{
+        flex-direction: row;
+        align-items: center;
         display: flex;
         flex-wrap: wrap;
+        order: 2;
+        flex-basis: 100%;
+    }
+    #filters > h2{
+        margin-right: 30px;
+    }
+    #filters > p{
+        flex-basis: 100%;
+        padding-bottom: 10px;
+    }
+
+    /* Location */
+    #location{
+        order: 1;
+    }
+    #location form{
+        display: flex;
+    }
+    #location form button{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    #location form button > span::before{
+        display: flex;
+        content: "Rechercher";
+        font-weight: 100;
+        font-size: 1.2em;
+    }
+    #location form button span > i{
+        display: none;
+    }
+
+    /* Mostpopular */
+    #mostpopular{
         flex-direction: row;
+        max-width: 460px;
+        padding: 50px 40px;
+        row-gap: 30px;
+        order: 4;
+        flex-basis: 32%;
+        flex-wrap: wrap;
+        border-radius: 20px;
+        background-color: #f2f2f2;  
+    }
+    #mostpopular  h2{
         justify-content: space-between;
-        column-gap: 20px;
+        padding: 0;
+    }
+    #mostpopular > article{
+        margin: 0;
+        flex-basis: 100%;
+        height: 160px;
+    }
+    
+    /* Accommodation */
+    #accommodation{
+        max-width: 1100px;
+        order: 3;
+        flex-basis: 66%;
+        border-radius: 20px;
+        background-color: #f2f2f2;
+        row-gap: 30px;
+        padding: 50px 40px;
+        column-gap: 30px;
+    }
+    #accommodation > h2{
+        padding: 0 0;
+    }
+    #accommodation > a{
+        justify-content: flex-start;
+    }
+    #accommodation > article{
+        min-width: 280px;
+        max-width: 280px;
+    }
+
+    /* Activities */
+    #activities{
+        order: 5;
+        padding: 40px 0;
+        display: flex;
+        flex-basis: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #activities > h2{
+        flex-basis: 100%;
+    }
+    #container-activities{
+        display: flex;
+        padding: 0;
+        flex-direction: row;
+        flex-basis: 100%;
+        
+    
+    }
+    #container-activities > div:first-child {
+        order: 1;
+    }
+    #container-activities > div:nth-child(2){
+        order: 2;
+    }
+    #container-activities > div:nth-child(3) {
+        order: 3;
+    }
+    #container-activities > div:nth-child(4){
+        order: 4;
+    }
+
+    #activities > #container-activities > div{
+        flex-basis: 22% ;
+        flex-direction: column;
+        
+    }
+    #container-activities > div:first-child, #container-activities > div:nth-child(3){
+        height: 480px;
+    }
+    #container-activities > div:first-child > article,  #container-activities > div:nth-child(3)> article{
+        height: 100%;
+    }
+    #container-activities > div:first-child > article  img, #container-activities > div:nth-child(3) > article img{
+        height: 420px;
+        width: 100%;
+    }
+    #container-activities > div:nth-child(2), #container-activities > div:nth-child(4){
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    #container-activities > div:nth-child(2) > article:first-child{
+        height: 260px;
+    }
+    #container-activities  >div:nth-child(2) > article:first-child  img{
+        height: 200px;
+    }
+    #container-activities > div:nth-child(2) > article:nth-child(2){
+        height: 180px;
+    }
+    #container-activities > div:nth-child(2) > article:nth-child(2) img{
+        height: 120px;
+    }
+    #container-activities > div:nth-child(4) > article:first-child{
+        height: 240px;
+    }
+    #container-activities > div:nth-child(4) > article:first-child img{
+        height: 180px;
+    }
+    #container-activities > div:nth-child(4) > article:nth-child(2){
+        height: 200px;
+    }
+    #container-activities > div:nth-child(4) > article:nth-child(2) img{
+        height: 140px; 
+    }
+    
+    /* Footer */
+    footer {
+        padding-bottom: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    footer div > h2{
+        padding-bottom: 25px;
+    }
+    footer nav ul{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
     }
 }
